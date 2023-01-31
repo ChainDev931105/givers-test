@@ -424,7 +424,6 @@ contract DEEZNUTS is Context, IERC20, Ownable {
         uint256 charityPart = newBalance.div(_liquidityFee).mul(charityFee);
         uint256 marketingPart = newBalance.sub(liquidityPart).sub(charityPart);
 
-
         _charityWallet.transfer(charityPart);
         _marketingWallet.transfer(marketingPart);
 

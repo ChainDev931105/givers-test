@@ -83,8 +83,7 @@ describe("DEEZNUTS", function () {
     const charityAddress = await charityWallet.getAddress();
     const burnAddress = "0x000000000000000000000000000000000000dEaD";
     const numTokensSellToAddToLiquidity = ethers.utils.parseEther("1000000");
-    await expect(deeznuts.transfer(deeznuts.address, numTokensSellToAddToLiquidity.mul(2))).to.not
-      .rejected;
+    await expect(deeznuts.transfer(deeznuts.address, numTokensSellToAddToLiquidity.mul(2))).to.not.rejected;
 
     const balanceMarketingBefore = await ethers.provider.getBalance(marketingAddress);
     const balanceCharityBefore = await ethers.provider.getBalance(charityAddress);
@@ -95,9 +94,9 @@ describe("DEEZNUTS", function () {
     const balanceCharityAfter = await ethers.provider.getBalance(charityAddress);
     const balanceBurnAfter = await deeznuts.balanceOf(burnAddress);
 
-    console.log({balanceMarketingAfter, balanceMarketingBefore});
-    console.log({balanceCharityAfter, balanceCharityBefore});
-    console.log({balanceBurnAfter, balanceBurnBefore});
+    console.log({ balanceMarketingAfter, balanceMarketingBefore });
+    console.log({ balanceCharityAfter, balanceCharityBefore });
+    console.log({ balanceBurnAfter, balanceBurnBefore });
     expect(balanceMarketingAfter).gt(balanceMarketingBefore);
     expect(balanceCharityAfter).gt(balanceCharityBefore);
     expect(balanceBurnAfter).gt(balanceBurnBefore);

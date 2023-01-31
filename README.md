@@ -37,10 +37,12 @@ https://bscscan.com/address/0x741f72bc9e29f662f2eb41c5ab450a2ca33be57d#code
 ## Guide
 
 ### .env
+```
 INFURA_API_KEY=<Infura api key>
 PRIVATE_KEY_0=<private key of PRIMARY WALLET>
 PRIVATE_KEY_1=<private key of CHARITY WALLET>
 PRIVATE_KEY_2=<private key of MARKETING WALLET>
+```
 
 ### Script
 
