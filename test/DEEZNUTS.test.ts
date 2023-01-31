@@ -3,7 +3,7 @@ import { anyValue } from "@nomicfoundation/hardhat-chai-matchers/withArgs";
 import { expect } from "chai";
 import { ethers } from "hardhat";
 import { Signer } from "ethers";
-import { DEEZNUTS, IUniswapV2Router02 } from "../typechain-types";
+import { DEEZNUTS } from "../typechain-types";
 import { deployDEEZNUTS } from "../instructions";
 
 describe("DEEZNUTS", function () {
