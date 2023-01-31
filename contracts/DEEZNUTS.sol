@@ -10,6 +10,8 @@ import { IUniswapV2Factory } from "@uniswap/v2-core/contracts/interfaces/IUniswa
 import { IUniswapV2Pair } from "@uniswap/v2-core/contracts/interfaces/IUniswapV2Pair.sol";
 import { IUniswapV2Router02 } from "./interfaces/IUniswapV2Router02.sol";
 
+import "hardhat/console.sol";
+
 contract DEEZNUTS is Context, IERC20, Ownable {
     using SafeMath for uint256;
     using Address for address;
@@ -421,6 +423,7 @@ contract DEEZNUTS is Context, IERC20, Ownable {
         liquidityPart = liquidityPart.div(2);
         uint256 charityPart = newBalance.div(_liquidityFee).mul(charityFee);
         uint256 marketingPart = newBalance.sub(liquidityPart).sub(charityPart);
+
 
         _charityWallet.transfer(charityPart);
         _marketingWallet.transfer(marketingPart);

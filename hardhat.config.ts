@@ -44,6 +44,11 @@ const config: HardhatUserConfig = {
     },
   },
   networks: {
+    hardhat: {
+      forking: {
+        url: "https://bsc-dataseed.binance.org",
+      },
+    },
     matic: {
       url: "https://rpc-mumbai.matic.today", // https://rpc-mumbai.maticvigil.com/
       accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
